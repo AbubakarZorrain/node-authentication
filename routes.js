@@ -108,7 +108,7 @@ app.get('/users', async (request, response) => {
 // Export this variable to access it in routes.js
 
 
-app.get('/main', checkAuthenticated, (req, res) => {
+app.get('/', checkAuthenticated, (req, res) => {
   res.render('index.hbs', { name: req.user.username })
 })
 app.get('/login', checkNotAuthenticated, (req, res) => {
@@ -120,7 +120,7 @@ app.get('/loginfailed', checkNotAuthenticated, (req, res) => {
 
 app.post('/login', checkNotAuthenticated, 
 passport.authenticate('local', {
-  successRedirect: '/main',
+  successRedirect: '/',
   failureRedirect: '/loginfailed',
   failureFlash: true
 }))
