@@ -1,0 +1,24 @@
+
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="loginbox">
+  <h1 class="h1" >Welcome !</h1>
+{{#if name}}
+
+		<h1 class="err-msg">{{name}}</h1>
+    <hr>
+    <h1 class="err-msg">You are logged In Sucessfuly...</h1>
+{{/if }}
+<form action="/logout?_method=DELETE" method="POST">
+ 
+  <button class="submit" type="submit">Log Out</button>
+</form>
+
+</div>
+
+</body>
+</html>

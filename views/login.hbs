@@ -1,0 +1,28 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="loginbox">
+  <h1 class="h1" >Login</h1>
+{{#if message}}
+{{message}}
+		<h1 class="err-msg">Username or password is incorrect</h1>
+{{/if }}
+  <form action="/login" type="x-www-form-urlencoded" method="POST">
+  <div>
+    <label for="username" id="username" class="label">Username</label>
+    <input type="text" id="username" name="username" required>
+  </div>
+  <div>
+    <label class="label" for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+  </div>
+  <button class="submit" type="submit">Login</button>
+</form>
+<a href="/register">Register</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/stylesheet" href="/public/style.css">
+  </head>
+  <body>
+
+
+    
+<h1 class="hh" >Login</h1>
+<% if (messages.error) { %>
+  <%= messages.error %>
+<% } %>
+<form action="/login" type="x-www-form-urlencoded" method="POST">
+  <div>
+    <label for="email">Username</label>
+    <input type="text" id="username" name="username" required>
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+  </div>
+  <button type="submit">Login</button>
+</form>
+<a href="/register">Register</a>
+
+
+  </body>
+</html>
