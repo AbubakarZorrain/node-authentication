@@ -24,6 +24,4 @@ db.once("open", function () {
 });
 app.use(Router);
 
-app.listen(3300, () => {
-  console.log("Server is running at port 3300");
-});
+app.listen(process.env.PORT)
