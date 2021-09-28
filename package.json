@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "first.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node first.js"
   },
   "author": "Abubakar Zorrain",
   "license": "ISC",
@@ -17,5 +17,8 @@
     "mongoose": "^6.0.8",
     "passport": "^0.5.0",
     "passport-local": "^1.0.0"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
